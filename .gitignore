@@ -1,0 +1,35 @@
+# --- General ---
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# --- FRONTEND (Vite) ---
+FRONTEND/node_modules/
+FRONTEND/dist/
+FRONTEND/dist-ssr/
+FRONTEND/*.local
+FRONTEND/.vscode/
+FRONTEND/.idea/
+
+# --- BACKEND (Django) ---
+# Environment & Caches
+BACKEND/__pycache__/
+BACKEND/*.py[cod]
+BACKEND/*$py.class
+BACKEND/.venv/
+BACKEND/venv/
+BACKEND/env/
+
+# Database (Local development)
+BACKEND/db.sqlite3
+BACKEND/db.sqlite3-journal
+
+# Media & Static
+# We ignore these because they are usually generated or user-uploaded
+BACKEND/media/
+BACKEND/static/
+!BACKEND/static/.gitkeep
+
+# Django Secret Key & Local Settings
+BACKEND/local_settings.py

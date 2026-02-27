@@ -125,9 +125,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://eyta-creatives.vercel.app/"
 ]
