@@ -41,8 +41,8 @@ const Products = ({ onAddToCart }: ProductsProps) => {
   useEffect(() => {
     const fetchProductsData = async () => {
       try {
-        // Pointing directly to the Django server to prevent the frontend from intercepting it
-        const response = await fetch('http://127.0.0.1:8000/api/products-section/'); 
+        const baseUrl = import.meta.env.VITE_API_URL || '';
+        const response = await fetch(`${baseUrl}/api/products-section/`); 
         if (!response.ok) throw new Error('Failed to fetch data');
         
         const data: ProductsSectionData = await response.json();

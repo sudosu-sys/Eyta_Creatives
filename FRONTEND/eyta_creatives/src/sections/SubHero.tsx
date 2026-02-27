@@ -74,8 +74,8 @@ const SubHero = () => {
   useEffect(() => {
     const fetchSubHeroData = async () => {
       try {
-        // NOTE: Adjust this URL to match your Django setup (e.g., if you are running on a different port or server)
-        const response = await fetch('http://127.0.0.1:8000/api/subhero/');
+        const baseUrl = import.meta.env.VITE_API_URL || '';
+        const response = await fetch(`${baseUrl}/api/subhero/`);
         if (response.ok) {
           const data = await response.json();
           // Assuming Django returns an array, we grab the first object. Adjust if it returns a single object.

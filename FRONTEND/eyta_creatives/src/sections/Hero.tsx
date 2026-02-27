@@ -21,7 +21,8 @@ const Hero = () => {
     // Fetch data from Django
     const fetchHero = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/hero/');
+        const baseUrl = import.meta.env.VITE_API_URL || '';
+        const response = await fetch(`${baseUrl}/api/hero/`);
         const data = await response.json();
         setHeroData(data);
         setIsVisible(true);

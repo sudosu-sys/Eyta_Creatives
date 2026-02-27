@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4(s*ypj0=#hrgf4u9ac)()3@r3o7@lftug35gvs3u0xv3b5@-f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eytacreatives.pythonanywhere.com']
+ALLOWED_HOSTS = ['eytacreatives.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -131,5 +131,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://eyta-creatives.vercel.app/"
+    "https://eyta-creatives.vercel.app"
 ]
