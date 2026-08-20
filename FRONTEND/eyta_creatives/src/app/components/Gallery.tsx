@@ -39,10 +39,23 @@ export default function Gallery() {
                   loop
                   playsInline
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  onMouseEnter={(e) => e.currentTarget.play()}
+                  onMouseEnter={(e) => {
+                    if (window.innerWidth >= 768) e.currentTarget.play().catch(() => {})
+                  }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.pause()
-                    e.currentTarget.currentTime = 0
+                    if (window.innerWidth >= 768) {
+                      e.currentTarget.pause()
+                      e.currentTarget.currentTime = 0
+                    }
+                  }}
+                  onClick={(e) => {
+                    if (window.innerWidth < 768) {
+                      if (e.currentTarget.paused) {
+                        e.currentTarget.play().catch(() => {})
+                      } else {
+                        e.currentTarget.pause()
+                      }
+                    }
                   }}
                 />
                 <img 
