@@ -9,9 +9,6 @@ export default function Gallery() {
     { span: 'md:col-span-1', height: 'h-[300px] md:h-[400px]', videoSrc: '/ag_palace.mp4', poster: '/ag_palace.PNG' },
     { span: 'md:col-span-1', height: 'h-[300px] md:h-[400px]', videoSrc: '/beka_burger.mp4', poster: '/beka_burger.PNG' },
     { span: 'md:col-span-1', height: 'h-[300px] md:h-[400px]', videoSrc: '/about.mp4', poster: '/about.png' },
-    // Bottom row
-    { span: 'md:col-span-1', height: 'h-[300px] md:h-[400px]', videoSrc: '/video6.mp4', poster: '/thumb6.jpg' },
-    { span: 'md:col-span-2', height: 'h-[300px] md:h-[400px]', videoSrc: '/video7.mp4', poster: '/thumb7.jpg' },
   ]
 
   return (
