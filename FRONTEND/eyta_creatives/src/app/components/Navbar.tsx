@@ -31,7 +31,7 @@ export default function Navbar() {
       </div>
 
       {/* Center section: Navigation links */}
-      <div className="flex items-center gap-1.5 text-black/90">
+      <div className="hidden lg:flex items-center gap-1.5 text-black/90">
         {navLinks.map((link, index) => (
           <div key={link.name} className="flex items-center">
             <Link 
@@ -51,9 +51,9 @@ export default function Navbar() {
       {/* Right section: Vertical bar, Login, Button */}
       <div className="flex items-center gap-4">
         {/* Vertical Separator */}
-        <span className="h-4 w-px bg-black/20" aria-hidden="true"></span>
+        <span className="hidden md:block h-4 w-px bg-black/20" aria-hidden="true"></span>
         
-        <Link href="/login" className="text-black/90 hover:text-black">
+        <Link href="/login" className="hidden md:block text-black/90 hover:text-black">
           Log in
         </Link>
         

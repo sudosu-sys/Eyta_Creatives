@@ -1,6 +1,11 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Pricing() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   const plans = [
     {
       name: 'Basic',
@@ -74,8 +79,8 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <Link 
-              href="tel:+" 
+            <button 
+              onClick={() => setIsModalOpen(true)}
               className={`w-full py-3.5 rounded-full font-medium text-sm text-center transition-colors ${
                 plan.isPopular 
                   ? 'bg-white text-black hover:bg-white/90' 
@@ -83,10 +88,35 @@ export default function Pricing() {
               }`}
             >
               Call Now
-            </Link>
+            </button>
           </div>
         ))}
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-3xl p-6 md:p-8 w-full max-w-sm relative shadow-2xl border border-black/5">
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-5 right-5 text-black/40 hover:text-black transition-colors"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <h3 className="text-2xl font-bold text-black mb-2" style={{ fontFamily: 'var(--font-zodiak), serif' }}>Get in Touch</h3>
+            <p className="text-sm text-black/60 mb-6">Tap a number below to place a call.</p>
+            <div className="flex flex-col gap-3">
+              <a href="tel:0991005292" className="w-full py-3.5 bg-black/5 hover:bg-black hover:text-white transition-colors text-black font-medium text-sm rounded-xl text-center">
+                0991005292
+              </a>
+              <a href="tel:0996520752" className="w-full py-3.5 bg-black/5 hover:bg-black hover:text-white transition-colors text-black font-medium text-sm rounded-xl text-center">
+                0996520752
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

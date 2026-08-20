@@ -26,10 +26,10 @@ export default function Hero() {
 
         {/* Main Heading */}
         <h1 
-          className="text-[120px] leading-[0.9] tracking-tight text-black flex items-start mb-8" 
+          className="text-7xl lg:text-[120px] leading-[0.9] tracking-tight text-black flex items-start mb-6 lg:mb-8" 
           style={{ fontFamily: 'var(--font-zodiak), serif' }}
         >
-          Eyta<span className="text-6xl mt-4 font-sans font-light">+</span>
+          Eyta<span className="text-4xl lg:text-6xl mt-1 lg:mt-4 font-sans font-light">+</span>
         </h1>
 
         <div className="h-px bg-black/10 w-full max-w-md mb-8" />
@@ -67,7 +67,7 @@ export default function Hero() {
         <div className="h-px bg-black/10 w-full max-w-md mb-8" />
 
         {/* CTA Buttons */}
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center gap-4 md:gap-8">
           <Link 
             href="#" 
             className="bg-black text-white px-8 py-3.5 rounded-full font-medium text-sm hover:bg-black/90 transition-colors"
@@ -85,7 +85,7 @@ export default function Hero() {
       </div>
 
       {/* Right Column: Visuals */}
-      <div className="relative w-full h-full flex justify-center items-center">
+      <div className="relative w-full h-[400px] lg:h-full flex justify-center items-center mt-8 lg:mt-0">
         {/* Main Model Image */}
         <div className="relative z-10 w-full h-full bg-black/5 rounded-3xl overflow-hidden flex items-center justify-center border border-black/5">
           <Image 

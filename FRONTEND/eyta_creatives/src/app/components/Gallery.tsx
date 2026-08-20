@@ -18,7 +18,7 @@ export default function Gallery() {
           className="text-6xl md:text-8xl tracking-tight text-black"
           style={{ fontFamily: 'var(--font-zodiak), serif' }}
         >
-          Photo Gallery
+          Proof
         </h2>
         <p className="text-black/80 text-sm md:text-base max-w-[250px] md:text-right leading-relaxed md:pb-3">
           Captured moments from our desert trips and scenic routes.
